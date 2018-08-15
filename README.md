@@ -32,7 +32,7 @@ to
 
 </code></pre>
 
-If you note that's OID above. its is a interface "ether0" Mikrortik, however OIDS change ever. You will need be patience to <b>find out</b> correct OID to his interface. I gonna show you how to.
+If you note that's OID above. its is a interface "ether0" Mikrortik, however OIDS change ever. You will need be patience to <b>find out</b> correct OID to its interface. I gonna show you how to.
 
 <pre><code>#  snmpwalk -v 2c -c hakyluffy -On 10.0.0.7 
 </pre></code>
