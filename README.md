@@ -13,7 +13,7 @@ This is a external colector script created to improve Zabbix, if you you dont wa
 # curl -O https://raw.githubusercontent.com/juliolix/BandZabbix/master/BandZabbix
 </code></pre>
 
-<b> 2º step | Install snmpwalk Downloading BandZabbix </b>
+<b> 2º step | Install snmpwalk </b>
 
 <pre><code># cd /usr/lib/zabbix/externalscripts
 # apt-get install snmp 
