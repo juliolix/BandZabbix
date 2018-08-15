@@ -43,3 +43,51 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 <b> 4º step - Configuring Zabbix </b>
 
 ![Screenshot](item1.png)<br>
+
+
+
+<b> SOURCE  BANDZABBIX </b>
+
+<pre><code>
+#!/bin/bash
+#Script gerador de dados para Zabbix
+#Criado por: Julio Martins Prefeitura de JF 
+#juliolix@gmail.com
+#Lembre de Instalar o snmpwalk no servidor Zabbix
+#apt-get install net-snmp snmp-utils
+#descomentar em /etc/snmp/snmp.conf
+#mibs :
+
+
+#STRING='.1.3.6.1.2.1.2.2.1.10.2'
+#VARIAVEL PARA OIDs Especiais
+STRING=$3
+
+#CMN='hakiluffy'
+#VARIAVEL PARA COMMUNITY
+CMN=$2
+
+
+#IP='168.82.180.24'
+#VARIAVEL PARA IP MONITORADO
+IP=$1
+
+TEMPO='5'
+
+ANTERIOR=$(snmpwalk -v 2c -c $CMN -On $IP $STRING | awk '{print $4}')
+
+sleep $TEMPO
+
+ATUAL=$(snmpwalk -v 2c -c $CMN -On $IP $STRING | awk '{print $4}')
+
+
+TOTAL=$(($ATUAL-ANTERIOR))
+
+BYTES=$(($TOTAL/$TEMPO))
+BITS=$(($BYTES*8))
+VELOCIDADE=$(($BITS/1024*1000))
+
+#echo $ANTERIOR
+#echo $ATUAL
+
+echo $VELOCIDADE
