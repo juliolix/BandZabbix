@@ -39,5 +39,6 @@ If you note that's OID above. its is a interface "ether0" Mikrortik, however OID
 
 ![Screenshot](terminal1.png)
 
+.1.3.6.1.2.1.31.1.1.1.10.1 = ETH0 INTERFACE DOWNLOAD ;)
 
 
