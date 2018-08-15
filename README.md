@@ -46,7 +46,8 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 
 
 
-<b> SOURCE  BANDZABBIX </b>
+
+<b><i> source code </i></b>
 
 <pre><code>
 #!/bin/bash
