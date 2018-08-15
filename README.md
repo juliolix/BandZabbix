@@ -37,7 +37,7 @@ If you note that's OID above. its is a interface "ether0" Mikrortik, however OID
 <pre><code>#  snmpwalk -v 2c -c hakyluffy -On 10.0.0.7 
 </pre></code>
 
-
+![Screenshot](terminal1.png)
 
 
 
