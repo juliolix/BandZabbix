@@ -1,6 +1,6 @@
 # BandZabbix - Graphics Easily using this External Script.  
 
-This is a external colector script created to improve Zabbix, if you you dont wast your time with a lot of bored configurations.
+This is a external colector script created to improve Zabbix, if you dont wanna wast your time with a lot of bored configurations.
 
 <div align="center"><b>Be happy easly dude ...</b></div>
 
