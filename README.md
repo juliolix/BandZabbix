@@ -10,7 +10,7 @@ This is a external colector script created to improve Zabbix, if you you dont wa
 <b> 1º step </b>
 
 <pre><code># cd /usr/lib/zabbix/externalscripts
-# ls
+# curl -O https://raw.githubusercontent.com/juliolix/BandZabbix/master/BandZabbix
 </code></pre>
 
 
