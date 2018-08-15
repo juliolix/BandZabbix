@@ -40,14 +40,14 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 .1.3.6.1.2.1.31.1.1.1.10.1 = eth0 interface download 
 
 
-<b> 4º step - Configuring Zabbix </b>
+<b> Final Step - Configuring Zabbix </b>
 
 ![Screenshot](item1.png)<br>
 
 
 
 
-<b><i> source code </i></b>
+<b><i> source code: </i></b>
 
 <pre><code>
 #!/bin/bash
