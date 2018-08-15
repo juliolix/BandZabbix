@@ -39,4 +39,4 @@ If you note that's OID above. its is a interface "ether0" Mikrortik, however OID
 ![Screenshot](terminal1.png)<br>
 .1.3.6.1.2.1.31.1.1.1.10.1 = eth0 interface download 
 
-<b> 4º step - Configuriong Zabbix </b>
+<b> 4º step - Configuring Zabbix </b>
