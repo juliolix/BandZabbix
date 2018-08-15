@@ -28,7 +28,7 @@ to
 
 <b> 3º step - lets testing the BandZabbix  </b>
 
-<pre><code># ./BandZabbix 10.0.0.7(ip) pjf(community) .1.3.6.1.2.1.2.2.1.10.1(OIDs)
+<pre><code># ./BandZabbix 10.0.0.7(ip) pjf(community) .1.3.6.1.2.1.31.1.1.1.10.1(OID)
 
 </code></pre>
 
