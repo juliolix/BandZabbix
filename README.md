@@ -28,10 +28,14 @@ to
 
 <b> 3º step | lets testing the BandZabbix  </b>
 
-<pre><code># ./BandZabbix 10.0.0.7 pjf 
+<pre><code># ./BandZabbix 10.0.0.7(ip) pjf(community) .1.3.6.1.2.1.2.2.1.10.1(OIDs)
+
 </code></pre>
 
+If you note that's OID above. its is a interface "ether0" Mikrortik, however OIDS change ever. You will need be patience to find out correct OID to his interface. I gonna show you how to.
 
+<pre><code>#  snmpwalk -v 2c -c hakyluffy -On 10.0.0.7 
+</pre></code>
 
 
 
