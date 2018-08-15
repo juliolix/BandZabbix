@@ -6,3 +6,9 @@ This is a external colector script created to improve Zabbix, if you you dont wa
 
 ![Screenshot](zabbix1.png)
 
+<b> 1º step </b>
+cd /usr/lib/zabbix/externalscripts
+
+
+
+
