@@ -28,15 +28,16 @@ to
 
 <b> 3º step - lets testing the BandZabbix  </b>
 
-<pre><code>#  snmpwalk -v 2c -c huehuebr -On 10.0.0.7 
-</pre></code>
-![Screenshot](terminal1.png)<br>
-.1.3.6.1.2.1.31.1.1.1.10.1 = eth0 interface download 
 
 <pre><code># ./BandZabbix 10.0.0.7(ip) huehuebr(community) .1.3.6.1.2.1.31.1.1.1.10.1(OID)
 </code></pre>
 
 If you note that's OID above. its is a interface "ether0" Mikrortik, however OIDS change ever. You will need be patience to <b>find out</b> correct OID to its interface. I gonna show you how to.
+
+<pre><code>#  snmpwalk -v 2c -c huehuebr -On 10.0.0.7 
+</pre></code>
+![Screenshot](terminal1.png)<br>
+.1.3.6.1.2.1.31.1.1.1.10.1 = eth0 interface download 
 
 
 <b> 4º step - Configuring Zabbix </b>
