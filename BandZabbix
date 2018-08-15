@@ -1,0 +1,36 @@
+#!/bin/bash
+#Script gerador de dados para Zabbix
+#Criado por: Julio Martins  Prefeitura de JF 
+#Eu amo o Italo 
+#Instalar o snmpwalk no servidor Zabbix
+
+
+#STRING='.1.3.6.1.2.1.2.2.1.10.2'
+STRING='.1.3.6.1.2.1.31.1.1.1.10.3'
+
+#STRING=$2
+
+CMN='pjf'
+
+IP='10.0.0.7'
+#IP=$1
+
+TEMPO='10'
+
+ANTERIOR=$(snmpwalk -v 2c -c $CMN -On $IP $STRING | awk '{print $4}')
+
+sleep $TEMPO
+
+ATUAL=$(snmpwalk -v 2c -c $CMN -On $IP $STRING | awk '{print $4}')
+
+
+TOTAL=$(($ATUAL-ANTERIOR))
+
+BYTES=$(($TOTAL/$TEMPO))
+BITS=$(($BYTES*8))
+VELOCIDADE=$(($BITS/1024*1000))
+
+#echo $ANTERIOR
+#echo $ATUAL
+
+echo $VELOCIDADE
