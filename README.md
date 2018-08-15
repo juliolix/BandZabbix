@@ -7,7 +7,7 @@ This is a external colector script created to improve Zabbix, if you dont wanna 
 ![Screenshot](zabbix1.png)
 
 
-<b> 1º step - Downloading BandZabbix </b>
+<b> 1º step - Downloading BandZabbix</b>
 
 <pre><code># cd /usr/lib/zabbix/externalscripts
 # curl -O https://raw.githubusercontent.com/juliolix/BandZabbix/master/BandZabbix
@@ -19,11 +19,11 @@ This is a external colector script created to improve Zabbix, if you dont wanna 
 
 <pre><code># cd /usr/lib/zabbix/externalscripts
 # apt-get install snmp 
-# vim /etc/snmp/snmp.conf 
+# vim /etc/zabbix/zabbix_server.conf 
 change 
-          # mibs : 
+          # Timeout=30
 to 
-            mibs :
+            Timeout=30
 </code></pre>
 
 <b> 3º step - lets testing the BandZabbix  </b>
