@@ -41,4 +41,5 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 
 
 <b> 4º step - Configuring Zabbix </b>
+
 ![Screenshot](item1.png)<br>
