@@ -32,7 +32,7 @@ to
 <pre><code># ./BandZabbix 10.0.0.7(ip) huehuebr(community) .1.3.6.1.2.1.31.1.1.1.10.1(OID)
 </code></pre>
 
-If you note that's OID above. it is a interface "ether0" Mikrotik, however OIDS change ever. You will need be patience to <b>find out</b> correct OID to its interface. I'm gonna show you how to.
+If you note the OID above it is the "ether0" interface's "Mikrotik", however, OIDS aways change. You will need to be patience to <b>find out</b> the correct interface's OID. I'm gonna show you how.
 
 <pre><code>#  snmpwalk -v 2c -c huehuebr -On 10.0.0.7 
 </pre></code>
