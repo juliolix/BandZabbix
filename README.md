@@ -52,6 +52,7 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 
 <b> Result: Status = Enabled</b><br>
 ![Screenshot](result.png)
+You can to configure UPLOAD just configuring correct OID Interface.
 <br>
 <br>
 <br>
@@ -102,3 +103,8 @@ VELOCIDADE=$(($BITS/1024*1000))
 #echo $ATUAL
 
 echo $VELOCIDADE
+
+<br>
+<br>
+## Help us to improve it!
+## Thanks!
