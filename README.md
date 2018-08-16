@@ -103,6 +103,7 @@ VELOCIDADE=$(($BITS/1024*1000))
 #echo $ATUAL
 
 echo $VELOCIDADE
+</pre></code>
 
 <br>
 <br>
