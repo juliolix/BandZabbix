@@ -1,4 +1,4 @@
-# BandZabbix - Graphics Easily using this External Script.  
+# BandZabbix - Graphics Easily using External Script.  
 
 This is a external colector script created to improve Zabbix, if you dont wanna wast your time with a lot of bored configurations.
 
