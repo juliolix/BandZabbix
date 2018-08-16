@@ -107,5 +107,6 @@ echo $VELOCIDADE
 
 <br>
 <br>
-### Help us to improve it!
-### Thanks!
+
+# Help us to improve it!
+# Thanks!
