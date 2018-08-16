@@ -52,7 +52,7 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 
 <b> Result: Status = Enabled</b><br>
 ![Screenshot](result.png)
-You can also configure UPLOAD just setting correct OID Interface, create new item to UPLOAD.
+You can also configure UPLOAD just setting correct OID Interface, create new item to do it.
 <br>
 <br>
 <br>
