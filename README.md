@@ -51,7 +51,10 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 <br>
 
 <b> Result: Status = Enabled</b><br>
-![Screenshot](result.png)<br>
+![Screenshot](result.png)
+<br>
+<br>
+<br>
 
 
 <b><i> source code: </i></b>
