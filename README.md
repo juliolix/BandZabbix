@@ -26,7 +26,7 @@ to
             Timeout=30
 </code></pre>
 
-<b> 3º step - lets testing the BandZabbix  </b>
+<b> 3º step - lets test the BandZabbix  </b>
 
 
 <pre><code># ./BandZabbix 10.0.0.7(ip) huehuebr(community) .1.3.6.1.2.1.31.1.1.1.10.1(OID)
