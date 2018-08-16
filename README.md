@@ -45,7 +45,10 @@ If you note that's OID above. its is a interface "ether0" Mikrotik, however OIDS
 - Create host 
 - Create Item 
 
-![Screenshot](item1.png)<br>
+![Screenshot](item1.png)
+<br>
+<br>
+<br>
 
 <b> Result: Status = Enabled</b><br>
 ![Screenshot](result.png)<br>
