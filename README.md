@@ -1,4 +1,4 @@
-## BandZabbix - Graphics Easily using External Script.  
+## BandZabbix - Graphics Easily using Python   
 
 This is a external colector script created to improve Zabbix, if you dont wanna wast your time with a lot of bored configurations.
 
@@ -61,52 +61,49 @@ You can also configure UPLOAD just setting correct OID Interface, create new ite
 <b><i> source code: </i></b>
 
 <pre><code>
-#!/bin/bash
-#Script gerador de dados para Zabbix
-#Criado por: Julio Martins Prefeitura de JF 
-#juliolix@gmail.com
-#Lembre de Instalar o snmpwalk no servidor Zabbix
-#apt-get install net-snmp snmp-utils
-#descomentar em /etc/snmp/snmp.conf
-#mibs :
+#!/usr/bin/env python
+
+import sys, commands, string, time
 
 
-#STRING='.1.3.6.1.2.1.2.2.1.10.2'
-#VARIAVEL PARA OIDs Especiais
-STRING=$3
+class BzaB:
 
-#CMN='hakiluffy'
-#VARIAVEL PARA COMMUNITY
-CMN=$2
+    def __init__(self, ip, community, oid):
+        self.ip = ip
+        self.community = community
+        self.oid = oid
+
+      
+  
+    def GetSpeed(self):
+        self.data_arg = sys.argv
+        self.ip = self.data_arg[1]
+        self.community = self.data_arg[2]
+        self.oid = self.data_arg[3]
+        self.time_data = 5
+               
+               
+        self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid) 
+        self.before_data = (self.data)[(string.find(self.data, ": ")) + 2:-1]
+
+        time.sleep(self.time_data)
+      
+        self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid)
+        self.after_data = (self.data)[(string.find(self.data, ": ")) + 2:-1]
+
+     
+        self.total_data = (int(self.after_data) - int(self.before_data))
+        self.bytes_data = (self.total_data / self.time_data)
+        self.speed_data = ((self.bytes_data * 8) * 100) 
+
+        print(self.speed_data)
 
 
-#IP='168.82.180.24'
-#VARIAVEL PARA IP MONITORADO
-IP=$1
-
-TEMPO='5'
-
-ANTERIOR=$(snmpwalk -v 2c -c $CMN -On $IP $STRING | awk '{print $4}')
-
-sleep $TEMPO
-
-ATUAL=$(snmpwalk -v 2c -c $CMN -On $IP $STRING | awk '{print $4}')
+   
+x = BzaB(1,2,3)
+BzaB.GetSpeed(x)
 
 
-TOTAL=$(($ATUAL-ANTERIOR))
-
-BYTES=$(($TOTAL/$TEMPO))
-BITS=$(($BYTES*8))
-VELOCIDADE=$(($BITS/1024*1000))
-
-#echo $ANTERIOR
-#echo $ATUAL
-
-echo $VELOCIDADE
-</pre></code>
-
-<br>
-<br>
 
 # Help us to improve it!
 # Thanks!
