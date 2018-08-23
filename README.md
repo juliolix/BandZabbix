@@ -102,7 +102,7 @@ class BzaB:
 x = BzaB(1,2,3)
 BzaB.GetSpeed(x)
 
-
+</pre></code>
 
 
 
