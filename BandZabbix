@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+#Criado por: Julio Martins Prefeitura de JF 
+#juliolix@gmail.com
+#Lembre de Instalar o snmpwalk no servidor Zabbix
+#apt-get install net-snmp snmp-utils
+#descomentar em /etc/snmp/snmp.conf
+#mibs :
+
 
 import sys, commands, string, time
 
