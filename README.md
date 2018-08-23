@@ -62,6 +62,12 @@ You can also configure UPLOAD just setting correct OID Interface, create new ite
 
 <pre><code>
 #!/usr/bin/env python
+#Criado por: Julio Martins Prefeitura de JF 
+#juliolix@gmail.com
+#Lembre de Instalar o snmpwalk no servidor Zabbix
+#apt-get install net-snmp snmp-utils
+#descomentar em /etc/snmp/snmp.conf
+#mibs :
 
 import sys, commands, string, time
 
