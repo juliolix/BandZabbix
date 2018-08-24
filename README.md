@@ -79,35 +79,38 @@ class BzaB:
         self.community = community
         self.oid = oid
 
-      
-  
+
+
     def GetSpeed(self):
         self.data_arg = sys.argv
         self.ip = self.data_arg[1]
         self.community = self.data_arg[2]
         self.oid = self.data_arg[3]
         self.time_data = 5
-               
-               
-        self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid) 
+
+
+        self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid)
         self.before_data = (self.data)[(string.find(self.data, ": ")) + 2:-1]
 
         time.sleep(self.time_data)
-      
+
         self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid)
         self.after_data = (self.data)[(string.find(self.data, ": ")) + 2:-1]
 
-     
+
         self.total_data = (int(self.after_data) - int(self.before_data))
         self.bytes_data = (self.total_data / self.time_data)
-        self.speed_data = ((self.bytes_data * 8) * 100) 
+        self.speed_data = ((self.bytes_data * 8) * 10)
 
         print(self.speed_data)
 
-   
+
+
+
 if __name__ == '__main__':
     zab = BzaB(1, 2, 3)
-    zab.GetDate()
+    zab.GetSpeed()
+
 
 </pre></code>
 
