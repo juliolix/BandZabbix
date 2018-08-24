@@ -105,8 +105,9 @@ class BzaB:
         print(self.speed_data)
 
    
-x = BzaB(1,2,3)
-BzaB.GetSpeed(x)
+if __name__ == '__main__':
+    zab = BzaB(1, 2, 3)
+    zab.GetDate()
 
 </pre></code>
 
