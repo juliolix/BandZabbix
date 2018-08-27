@@ -91,7 +91,7 @@ class BzaB:
         time.sleep(self.time_data) 
         return 0
     
-    def DadoLapidado(self): # Captura o dado bruto e depois de 5 segundos captura novamente obtendo a diverenca
+    def DadoLapidado(self): # Captura o dado bruto e depois de 5 segundos captura novamente obtendo a diferenca
         return ((self.DadoBruto() + self.Cronometro()) - self.DadoBruto()) * -1
         
     def CalculaVelocidade(self): # Calcula a velocidade convertendo para bytes por segundo
