@@ -62,12 +62,13 @@ You can also configure UPLOAD just setting correct OID Interface, create new ite
 
 <pre><code>
 #!/usr/bin/env python
-#Criado por: Julio Martins Prefeitura de JF 
+#criado por: Julio Martins Prefeitura de JF 
 #juliolix@gmail.com
 #Lembre de Instalar o snmpwalk no servidor Zabbix
 #apt-get install net-snmp snmp-utils
 #descomentar em /etc/snmp/snmp.conf
 #mibs :
+
 
 import sys, commands, string, time
 
@@ -75,42 +76,34 @@ import sys, commands, string, time
 class BzaB:
 
     def __init__(self, ip, community, oid):
-        self.ip = ip
-        self.community = community
-        self.oid = oid
-
-
-
-    def GetSpeed(self):
-        self.data_arg = sys.argv
-        self.ip = self.data_arg[1]
-        self.community = self.data_arg[2]
-        self.oid = self.data_arg[3]
-        self.time_data = 5
-
-
-        self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid)
+        self.ip = sys.argv[1]          # Pega o primeiro parametro
+        self.community = sys.argv[2]   # Pega o segundo parametro      
+        self.oid = sys.argv[3]         # Pega o terceiro parametro
+        self.time_data = 5             # Timer para 5 segundos
+            
+   
+    def DadoBruto(self):  # Pega o dado bruto do roteador pegando apenas o ultimo campo 
+        self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid) 
         self.before_data = (self.data)[(string.find(self.data, ": ")) + 2:-1]
+        return int(self.before_data)
+       
+    def Cronometro(self):  # Timer de controle 
+        time.sleep(self.time_data) 
+        return 0
+    
+    def DadoLapidado(self): # Captura o dado bruto e depois de 5 segundos captura novamente obtendo a diverenca
+        return ((self.DadoBruto() + self.Cronometro()) - self.DadoBruto()) * -1
+        
+    def CalculaVelocidade(self): # Calcula a velocidade convertendo para bytes por segundo
+        self.bytes_data = (self.DadoLapidado() / self.time_data)
+        return  (self.bytes_data * 8) * 10
 
-        time.sleep(self.time_data)
-
-        self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid)
-        self.after_data = (self.data)[(string.find(self.data, ": ")) + 2:-1]
-
-
-        self.total_data = (int(self.after_data) - int(self.before_data))
-        self.bytes_data = (self.total_data / self.time_data)
-        self.speed_data = ((self.bytes_data * 8) * 10)
-
-        print(self.speed_data)
-
-
-
-
+   
 if __name__ == '__main__':
-    zab = BzaB(1, 2, 3)
-    zab.GetSpeed()
 
+     zab = BzaB(1, 2, 3)
+
+     print zab.CalculaVelocidade()
 
 </pre></code>
 
