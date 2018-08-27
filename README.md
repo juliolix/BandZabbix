@@ -84,8 +84,7 @@ class BzaB:
    
     def DadoBruto(self):  # Pega o dado bruto do roteador pegando apenas o ultimo campo 
         self.data = commands.getoutput("snmpwalk -c" + self.community + " -v 1 " + self.ip + " " + self.oid) 
-        self.before_data = (self.data)[(string.find(self.data, ": ")) + 2:-1]
-        return int(self.before_data)
+        return int((self.data)[(string.find(self.data, ": ")) + 2:-1])
        
     def Cronometro(self):  # Timer de controle 
         time.sleep(self.time_data) 
