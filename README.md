@@ -12,7 +12,7 @@ This is an external colector Phyton created to improve Zabbix, if you dont wanna
 <pre><code># cd /usr/lib/zabbix/externalscripts
 # curl -O https://raw.githubusercontent.com/juliolix/BandZabbix/master/BandZabbix
 # chown zabbix.zabbix BandZabbix
-# chmod 755 BandZabbix
+# chmod 750 BandZabbix
 </code></pre>
 
 <b> 2º step - Install snmpwalk </b>
