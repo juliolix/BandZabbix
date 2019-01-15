@@ -62,8 +62,9 @@ You can also configure UPLOAD just setting correct OID Interface, create new ite
 <br>
 <br>
 
+Exemple using Mibs.
 ![Screenshot](ifOut.png)
-Maybe you use MIbs do it.
+
 
 
 <b><i> source code: </i></b>
