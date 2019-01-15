@@ -31,7 +31,7 @@ to
 
 <pre><code># ./BandZabbix 10.0.0.7(ip) huehuebr(community) .1.3.6.1.2.1.31.1.1.1.10.1(OID) 
 or
-./BandZabbix 10.0.0.7(ip) huehuebr(community) IF-MIB::ifOutOctets.4(Mibs)
+# ./BandZabbix 10.0.0.7(ip) huehuebr(community) IF-MIB::ifOutOctets.4(Mibs)
 
 </code></pre>
 
