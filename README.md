@@ -63,7 +63,7 @@ You can also configure UPLOAD just setting correct OID Interface, create new ite
 <br>
 
 Exemple using MIBs.
-![Screenshot](ifOut.png)
+![Screenshot](Out.png)
 
 
 
