@@ -75,7 +75,7 @@ Exemple using MIBs.
 #juliolix@gmail.com
 #Lembre de Instalar o snmpwalk no servidor Zabbix
 #apt-get install net-snmp snmp-utils
-#descomentar em /etc/snmp/snmp.conf
+#comentar em /etc/snmp/snmp.conf
 #mibs :
 
 
