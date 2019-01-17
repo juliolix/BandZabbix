@@ -31,7 +31,7 @@ to
 
 <pre><code># ./BandZabbix 10.0.0.7(ip) huehuebr(community) .1.3.6.1.2.1.31.1.1.1.10.1(OID) 
 or
-# ./BandZabbix 10.0.0.7(ip) huehuebr(community) IF-MIB::ifOutOctets.4(Mibs)
+# ./BandZabbix 10.0.0.7(ip) huehuebr(community) IF-MIB::ifOutOctets.1(Mibs)
 
 </code></pre>
 
@@ -42,7 +42,7 @@ If you note the OID above it is the "ether0" interface's "Mikrotik", however, OI
 ![Screenshot](terminal1.png)<br>
 .1.3.6.1.2.1.31.1.1.1.10.1 = eth0 interface download<br> 
 or<br>
-IF-MIB::ifOutOctets.4 = eth0 interface download 
+IF-MIB::ifOutOctets.1 = eth0 interface download 
 
 
 <b> Final Step - Configuring Zabbix </b>
