@@ -35,7 +35,7 @@ or
 
 </code></pre>
 
-If you note the OID above it is the "ether0" interface's "Mikrotik", however, OIDS aways change. You will need to be patience to <b>find out</b> the correct interface's OID. I'm gonna show you how.
+If you note the OID above it is the "ether0" interface's "Mikrotik", however, OIDS aways change. You will need to be patience to <b>find out</b> the correct interface's OID. I can to use MIBs to find out faster. I'm gonna show you how.
 
 <pre><code>#  snmpwalk -v 2c -c huehuebr -On 10.0.0.7 
 </pre></code>
